@@ -9,8 +9,8 @@ class City:
     self.humedad = float 
     self.wind = int
 
-  def geo_code(self):
-    geo_code_url = f'http://api.openweathermap.org/geo/1.0/direct?q={self.name}&lang=en&appid=c8ea2e391834030a5f5c4ff79f169e6d'
+  def geo_code(self,key):
+    geo_code_url = f'http://api.openweathermap.org/geo/1.0/direct?q={self.name}&lang=en&appid={key}'
 
     self.datos['url'] = geo_code_url
 
