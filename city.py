@@ -13,14 +13,12 @@ class City:
 
   def geo_code(self):
     geo_code_url = f'http://api.openweathermap.org/geo/1.0/direct?q={self.name},{self.country}&lang=en&appid={self.key}'
-
     self.datos['url'] = geo_code_url
 
   def decode_url(self):
     self.geo_code()
     url = urlopen(self.datos['url']);
     decoded_json = json.loads(url.read())
-    # self.datos['json'] = json.dumps(decoded_json[0],sort_keys=True, indent=4)
     self.datos['json'] = decoded_json[0]
 
   def info_weather(self):

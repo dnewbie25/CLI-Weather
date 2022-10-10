@@ -3,11 +3,6 @@ from city import City
 if __name__ == "__main__":
   print("Welcome to the Weather CLI")
   key = input("Enter your OpenWeather key:\n\t")
-  # info = City("bogota", "colombia", "c8ea2e391834030a5f5c4ff79f169e6d")
-  # info.set_temperatura()
-  # info.set_humidity()
-  # info.set_wind()
-  # print(info.datos)
   while True:
     city = input("Enter the city:\n\t").lower()
     country = input("Enter the country:\n\t").lower()
